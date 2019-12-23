@@ -175,7 +175,7 @@ top -b -o +%MEM | head -n 10
 
 * запустите утилиту atop как сервис через systemd
 
-'''
+```
 vagrant@ubuntu-xenial:/usr/bin$ sudo nano /etc/systemd/system/atop1.service
 vagrant@ubuntu-xenial:/usr/bin$ sudo systemctl enable atop1.service
 vagrant@ubuntu-xenial:/usr/bin$ sudo systemctl start atop1.service
@@ -200,20 +200,20 @@ Dec 21 22:24:34 ubuntu-xenial atop[3254]:  3255   0.00s   0.00s     0K     0K   
 Dec 21 22:24:34 ubuntu-xenial atop[3254]:  3253   0.00s   0.00s     0K     0K      -      - NE   0 E   0% <systemd-tty->
 Dec 21 22:24:34 ubuntu-xenial atop[3254]:  3252   0.00s   0.00s     0K     0K      -      - NE   0 E   0% <systemctl>
 Dec 21 22:24:34 ubuntu-xenial atop[3254]:  3251   0.00s   0.00s     0K     0K      -      - -E   0 E   0% <sudo>
-'''
+```
     
 * запустите dd на генерацию файла размер в 3 гигабайта
 
-'''
+```
 vagrant@ubuntu-xenial:/usr/bin$ sudo dd of=file bs=1 count=0 seek=3G
 0+0 records in
 0+0 records out
 0 bytes copied, 0.00047458 s, 0.0 kB/s
-'''
+```
 
 * удалите сгенеренный файл
 
-'''
+```
 vagrant@ubuntu-xenial:~$ rm file
 rm: remove write-protected regular file 'file'? y
-'''
+```
